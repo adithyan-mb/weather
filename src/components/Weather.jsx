@@ -15,7 +15,7 @@ import wind_icon from '../assets/wind.png'
 
 function Weather() {
     let [weatherData, setweatherData]=useState(false)
-    //let key="05b67396c28065664d739f0754" // dont hardcore API key into source code
+  
     let city;
     const allicons={
 
@@ -81,7 +81,7 @@ useEffect(()=>{ search("delhi");},[city ])
   return (
     <div className='weather'>
        <div className='searchbar'>
-            <input type="text"  placeholder='seacrh' spellCheck="false" ref={searchRef}/>
+            <input type="text"  placeholder='search' spellCheck="false" ref={searchRef}/>
             <img src={search_icon} onClick={()=>{search(searchRef.current.value)}}/>
        </div>
        {weatherData?<>
